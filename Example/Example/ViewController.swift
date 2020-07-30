@@ -35,6 +35,7 @@ class ViewController: UIViewController {
     @IBAction func rateClicked(_ sender: UIButton) {
         let flashcard = deck[currentIndex]
         print("Original Card: \(flashcard)")
+        print(sender.tag)
         let grade = sender.tag
         let gradedCard = engine.gradeFlashcard(flashcard: flashcard, grade: Grade(rawValue: grade)!, currentDatetime: NSDate().timeIntervalSince1970)
         print("Graded Card: \(gradedCard)")

@@ -10,8 +10,7 @@ import Foundation
 
 /// Flashcard
 public class Flashcard: Equatable, Hashable {
-    public var front: String
-    public var back: String
+    public var word: String
     public var uuid: UUID
     public var repetition = 0
     public var interval = 0
@@ -22,17 +21,16 @@ public class Flashcard: Equatable, Hashable {
         return uuid.hashValue
     }
 
-    public init(front: String, back: String) {
+    public init(word: String) {
         self.uuid = UUID()
-        self.front = front
-        self.back = back
+        self.word = word
     }
 
     public static func == (lhs: Flashcard, rhs: Flashcard) -> Bool {
-        return lhs.uuid == rhs.uuid &&
-            lhs.front == rhs.front &&
-            lhs.back == rhs.back
+        return lhs.uuid == rhs.uuid && lhs.word == rhs.word
     }
+    
+    
 }
 
 /**  Grades from SuperMemo Algorithm
