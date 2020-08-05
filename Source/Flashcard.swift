@@ -40,14 +40,14 @@ public class Flashcard: Equatable, Hashable {
     
     public init(word: String,
                 uuid: UUID,
-                repitition: Int,
+                repetition: Int,
                 interval: Int,
                 easinessFactor: Double,
                 previousDate: Double,
                 nextDate: Double)
     {
         self.word = word
-        self.repitition = repitition
+        self.repetition = repetition
         self.interval = interval
         self.easinessFactor = easinessFactor
         self.previousDate = previousDate
