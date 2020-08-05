@@ -37,6 +37,22 @@ public class Flashcard: Equatable, Hashable {
         self.uuid = UUID()
         self.word = word
     }
+    
+    public init(word: String,
+                uuid: UUID,
+                repitition: Int,
+                interval: Int,
+                easinessFactor: Double,
+                previousDate: Double,
+                nextDate: Double)
+    {
+        self.word = word
+        self.repitition = repitition
+        self.interval = interval
+        self.easinessFactor = easinessFactor
+        self.previousDate = previousDate
+        self.nextDate = nextDate
+    }
 
     public static func == (lhs: Flashcard, rhs: Flashcard) -> Bool {
         return lhs.uuid == rhs.uuid && lhs.word == rhs.word
