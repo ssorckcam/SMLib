@@ -20,6 +20,18 @@ public class Flashcard: Equatable, Hashable {
     public var hashValue: Int {
         return uuid.hashValue
     }
+    
+    var dictionary: [String: Any] {
+        return [
+            "word": word,
+            "uuid": uuid,
+            "repitition": repetition,
+            "interval": interval,
+            "easinessFactor": easinessFactor,
+            "previousDate": previousDate,
+            "nextDate": nextDate,
+        ]
+    }
 
     public init(word: String) {
         self.uuid = UUID()
