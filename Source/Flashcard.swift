@@ -47,6 +47,7 @@ public class Flashcard: Equatable, Hashable {
                 nextDate: Double)
     {
         self.word = word
+        self.uuid = uuid
         self.repetition = repetition
         self.interval = interval
         self.easinessFactor = easinessFactor
