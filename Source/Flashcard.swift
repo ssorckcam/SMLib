@@ -21,7 +21,7 @@ public class Flashcard: Equatable, Hashable, NSCopying {
         return uuid.hashValue
     }
     
-    public func copy(with zone: NSZone? = nil) -> Flashcard {
+    public func copy(with zone: NSZone? = nil) -> Any {
         return Flashcard(self)
     }
     
