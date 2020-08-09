@@ -9,7 +9,7 @@
 import Foundation
 
 /// Flashcard
-public class Flashcard: Equatable, Hashable {
+public class Flashcard: Equatable, Hashable, NSCopying {
     public var word: String
     public var uuid: UUID
     public var repetition = 0
@@ -19,6 +19,10 @@ public class Flashcard: Equatable, Hashable {
     public var nextDate = Date().timeIntervalSince1970
     public var hashValue: Int {
         return uuid.hashValue
+    }
+    
+    public func copy(with: zone: NSZone? = nil) -> Flashcard {
+        return Flashcard(self)
     }
     
     var dictionary: [String: Any] {
@@ -31,6 +35,19 @@ public class Flashcard: Equatable, Hashable {
             "previousDate": previousDate,
             "nextDate": nextDate,
         ]
+    }
+    
+    /**
+     Convenience initialiser for copying an instance of Flashcard
+     */
+    private init(_ f: Flashcard) {
+        self.word = f.word
+        self.uuid = f.uuid
+        self.repetition = f.repetition
+        self.interval = f.interval
+        self.easinessFactor = f.easinessFactor
+        self.previousDate = f.previousDate
+        self.nextDate = f.nextDate
     }
 
     public init(word: String) {
