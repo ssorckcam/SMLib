@@ -19,12 +19,12 @@ class FlashcardTests: XCTestCase {
     }
 
     func testGradeDescription() {
-        XCTAssertEqual(Grade.null.description, "complete blackout")
-        XCTAssertEqual(Grade.bad.description, "incorrect response; the correct one remembered")
-        XCTAssertEqual(Grade.fail.description, "incorrect response; where the correct one seemed easy to recall")
-        XCTAssertEqual(Grade.pass.description, "correct response recalled with serious difficulty")
-        XCTAssertEqual(Grade.good.description, "correct response after a hesitation")
-        XCTAssertEqual(Grade.bright.description, "perfect response")
+        XCTAssertEqual(Flashcard.Grade.null.description, "complete blackout")
+        XCTAssertEqual(Flashcard.Grade.bad.description, "incorrect response; the correct one remembered")
+        XCTAssertEqual(Flashcard.Grade.fail.description, "incorrect response; where the correct one seemed easy to recall")
+        XCTAssertEqual(Flashcard.Grade.pass.description, "correct response recalled with serious difficulty")
+        XCTAssertEqual(Flashcard.Grade.good.description, "correct response after a hesitation")
+        XCTAssertEqual(Flashcard.Grade.bright.description, "perfect response")
     }
 
     func testFlashcardEquatable1() {
