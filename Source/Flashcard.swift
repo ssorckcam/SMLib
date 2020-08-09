@@ -23,12 +23,12 @@ public class Flashcard: Equatable, Hashable, NSCopying {
     
     public func copy(with zone: NSZone? = nil) -> Any {
         return Flashcard(word: self.word,
-                         uuid = self.uuid,
-                         repetition = self.repetition,
-                         interval = self.interval,
-                         easinessFactor = self.easinessFactor,
-                         previousDate = self.previousDate,
-                         nextDate = self.nextDate)
+                         uuid: self.uuid,
+                         repetition: self.repetition,
+                         interval: self.interval,
+                         easinessFactor: self.easinessFactor,
+                         previousDate: self.previousDate,
+                         nextDate: self.nextDate)
     }
     
     var dictionary: [String: Any] {
