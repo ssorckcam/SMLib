@@ -22,7 +22,13 @@ public class Flashcard: Equatable, Hashable, NSCopying {
     }
     
     public func copy(with zone: NSZone? = nil) -> Any {
-        return Flashcard(self)
+        return Flashcard(word: self.word,
+                         uuid = self.uuid,
+                         repetition = self.repetition,
+                         interval = self.interval,
+                         easinessFactor = self.easinessFactor,
+                         previousDate = self.previousDate,
+                         nextDate = self.nextDate)
     }
     
     var dictionary: [String: Any] {
@@ -37,18 +43,18 @@ public class Flashcard: Equatable, Hashable, NSCopying {
         ]
     }
     
-    /**
-     Convenience initialiser for copying an instance of Flashcard
-     */
-    private init(_ f: Flashcard) {
-        self.word = f.word
-        self.uuid = f.uuid
-        self.repetition = f.repetition
-        self.interval = f.interval
-        self.easinessFactor = f.easinessFactor
-        self.previousDate = f.previousDate
-        self.nextDate = f.nextDate
-    }
+//    /**
+//     Convenience initialiser for copying an instance of Flashcard
+//     */
+//    private init(_ f: Flashcard) {
+//        self.word = f.word
+//        self.uuid = f.uuid
+//        self.repetition = f.repetition
+//        self.interval = f.interval
+//        self.easinessFactor = f.easinessFactor
+//        self.previousDate = f.previousDate
+//        self.nextDate = f.nextDate
+//    }
 
     public init(word: String) {
         self.uuid = UUID()
