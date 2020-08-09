@@ -15,5 +15,5 @@ protocol SMEngine {
     ///   - grade: Grade
     ///   - currentDatetime: grade Time
     /// - Returns: graded card
-    func gradeFlashcard(flashcard: Flashcard, grade: Grade, currentDatetime: TimeInterval) -> Flashcard
+    func gradeFlashcard(flashcard: Flashcard, grade: Flashcard.Grade, currentDatetime: TimeInterval) -> Flashcard
 }

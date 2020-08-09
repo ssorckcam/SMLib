@@ -28,7 +28,7 @@ public class SM2Engine: SMEngine {
     ///   - grade: Grade(0-5)
     ///   - currentDatetime: TimeInterval
     /// - Returns: Flashcard with new interval and repetition
-    public func gradeFlashcard(flashcard: Flashcard, grade: Grade, currentDatetime: TimeInterval) -> Flashcard {
+    public func gradeFlashcard(flashcard: Flashcard, grade: Flashcard.Grade, currentDatetime: TimeInterval) -> Flashcard {
         let cardGrade = grade.rawValue
         if cardGrade < 3 {
             flashcard.repetition = 0
