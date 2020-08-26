@@ -31,10 +31,9 @@ public class Flashcard: Equatable, Hashable, NSCopying {
                          nextDate: self.nextDate)
     }
     
-    var dictionary: [String: Any] {
+    public var dictionary: [String: Any] {
         return [
             "word": word,
-            "uuid": uuid,
             "repitition": repetition,
             "interval": interval,
             "easinessFactor": easinessFactor,
