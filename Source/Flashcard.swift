@@ -33,6 +33,7 @@ public class Flashcard: Equatable, Hashable, NSCopying {
     
     public var dictionary: [String: Any] {
         return [
+            "uuid": uuid.uuidString,
             "word": word,
             "repitition": repetition,
             "interval": interval,
